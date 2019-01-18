@@ -4,11 +4,11 @@ Demonstrates using (calling) FUNCTIONS and using (calling) METHODS:
   -- how they differ.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
-         Aaron Wilkin, their colleagues, and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         Aaron Wilkin, their colleagues, and George Bulger.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
-# TODO: 2.
+# DONE: 2.
 #   With your instructor, READ the file   methods_vs_functions.txt
 #   in this project, ASKING QUESTIONS as needed to understand its contents.
 #   After you have done so, mark this _TODO_ as DONE
@@ -98,7 +98,7 @@ def draw_many_squares(my_turtle, number_of_squares, size, twist):
         my_turtle.left(twist)
 
 ###############################################################################
-# TODO: 3.
+# DONE: 3.
 #   There are four FUNCTIONS defined ABOVE this:
 #     main
 #     run_example
@@ -126,6 +126,12 @@ def draw_many_squares(my_turtle, number_of_squares, size, twist):
 
 
 def try_methods():
+    new_pen = rg.SimpleTurtle
+    new_pen.pen = rg.Pen('brown', 5)
+    new_pen.forward(150)
+    new_pen.left(90)
+    new_pen.forward(50)
+    new_pen.backward(100)
     """
     Constructs a SimpleTurtle and sets its   pen   to a new rg.Pen
     that is 'brown' with thickness 5.
@@ -139,6 +145,7 @@ def try_methods():
     # TODO: 4. Implement and test this function, per its doc-string above.
     #   The testing code (in main) is already written for you.
     ###########################################################################
+
 
 
 ###############################################################################
