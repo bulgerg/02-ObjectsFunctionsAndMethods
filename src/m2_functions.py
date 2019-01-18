@@ -83,10 +83,10 @@ def h_solver(length1, length2):
 ###############################################################################
 def pen_tool(color, thickness):
     window = rg.TurtleWindow()
-    turtle_a=rg.SimpleTurtle()
-    turtle_b=rg.SimpleTurtle()
-    turtle_a.pen=rg.Pen('green', thickness)
-    turtle_b.pen=rg.Pen(color, 5)
+    turtle_a = rg.SimpleTurtle()
+    turtle_b = rg.SimpleTurtle()
+    turtle_a.pen = rg.Pen('green', thickness)
+    turtle_b.pen = rg.Pen(color, 5)
     turtle_a.forward(100)
     turtle_b.backward(100)
     window.close_on_mouse_click()
