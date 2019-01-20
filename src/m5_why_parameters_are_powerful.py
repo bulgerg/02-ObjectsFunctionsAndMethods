@@ -23,6 +23,11 @@ def main():
     # -------------------------------------------------------------------------
     draw_circles(rg.Point(100, 50))
     draw_circles(rg.Point(-200, 0))
+    better_draw_circles(rg.Point(0,-100), 5)
+    better_draw_circles(rg.Point(0, 100), 20)
+    even_better_draw_circles(rg.Point(100, -100), 8, 5, 'blue', 3)
+    even_better_draw_circles(rg.Point(100, 100), 10, 2, 'purple', 8)
+
 
     window.update()
     window.close_on_mouse_click()
@@ -88,7 +93,7 @@ def draw_circles(point):
 
 
 ###############################################################################
-# TODO: 3a.
+# DONE: 3a.
 #   The function
 #       better_draw_circles
 #   defined below this _TODO_ starts out exactly the same as the code for
@@ -131,11 +136,11 @@ def better_draw_circles(point, increase):
 
         t.pen_up()
         t.right(90)
-        t.forward(15)
+        t.forward(increase)  # These lines positions the turtle in the right center every time the loop runs
         t.left(90)
 
         t.pen_down()
-        t.draw_circle(increase * k)
+        t.draw_circle(increase * k)  # The size of the circle increases by 'increase'
     """
     Starts out the same as the   draw_circles   function defined ABOVE.
     You Will make it an IMPROVED, MORE POWERFUL function per the above _TODO_.
@@ -143,7 +148,7 @@ def better_draw_circles(point, increase):
 
 
 ###############################################################################
-# TODO: 4a.
+# DONE: 4a.
 #   In the previous _TODO_, you made a MORE POWERFUL version
 #   of   draw_circles   by introducing a new PARAMETER for the amount
 #   by which the radii of the concentric circles increase.
@@ -175,25 +180,32 @@ def better_draw_circles(point, increase):
 
 def even_better_draw_circles(point, increase, number_of_circles, color, thickness):
     t = rg.SimpleTurtle()
-    t.pen = rg.Pen(color, thickness)
+    t.pen = rg.Pen(color, thickness) #Sets the color and the thickness of the pen
     t.pen_up()
     t.go_to(point)
     t.set_heading(0)
+
+    #Moves the turtle to the specified point and points it east
+
     for k in range(1, number_of_circles+1):  # k becomes 1, 2, 3, ... 10
+
+        #k range is defined as above to create the number of the circle specified in the input
 
         t.pen_up()
         t.right(90)
-        t.forward(15)
+        t.forward(increase)
         t.left(90)
 
+        #Positions the turtle in the right center every time the loop runs
+
         t.pen_down()
-        t.draw_circle(increase * k)
+        t.draw_circle(increase * k) #The radius of the circle increases by 'increase'
     """ An improved version of draw_circles, per the _TODO_ above. """
     # READ the above _TODO_ and then copy-paste code from better_circles here:
 
 
 ###############################################################################
-# TODO: 5.
+# DONE: 5.
 #
 # Finally, comment-out the existing calls to  even_better_draw_circles  and
 # add code in   main  to draw various circles that form a BEAUTIFUL picture!
