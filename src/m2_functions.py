@@ -92,6 +92,7 @@ def pen_tool(color, thickness):
     window.close_on_mouse_click()
 
 
+
 ###############################################################################
 # DONE: 5.
 #   COMMIT-and-PUSH your work (after changing this TO-DO to DONE).
